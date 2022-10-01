@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Assignment 1</title>
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+			}
+			table {
+				width: 100%;
+				border-collapse: collapse;
+			}
+			th {
+				width: 25%;
+				text-align: left;
+			}
+			#books-data th {
+				width: 20%;
+				text-align: left;
+				padding: 5px;
+			}
+			#books-data th:last-child {
+				width: 40%;
+			}
+
+			.text-overflow {
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				max-width: 150px;
+			}
+			td,
+			th {
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+			tr {
+				border-bottom: 1px solid lightslategray;
+			}
+			tr:hover {
+				background-color: lightgray;
+			}
+			h2 {
+				text-align: center;
+			}
+			.search {
+				text-align: center;
+				margin: 10px 0;
+			}
+			input {
+				width: 350px;
+				outline: none;
+				padding: 5px;
+				border: 0;
+				border-bottom: 2px solid lightslategray;
+				font-size: 16px;
+			}
+			input:focus {
+				border-bottom: 2px solid blueviolet;
+			}
+			.text-center {
+				text-align: center;
+			}
+			nav {
+				display: flex;
+				background-color: blueviolet;
+				padding: 16px;
+				color: white;
+			}
+			nav > li {
+				list-style: none;
+				margin-right: 20px;
+			}
+			nav > li > a {
+				color: white;
+                font-size: 18px;
+			}
+			.p-4 {
+				padding: 16px;
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<li><a href="/assignment-1">Assignment 1</a></li>
+			<li><a href="/assignment-2">Assignment 2</a></li>
+		</nav>
+		<div class="p-4">
+			<div>
+				<h2>Books Data</h2>
+				<div class="search">
+					<input
+						type="text"
+						id="search-book"
+						placeholder="Search book by ISBN or Author's email."
+					/>
+				</div>
+				<table id="books-data">
+					<thead></thead>
+					<tbody></tbody>
+				</table>
+			</div>
+
+			<div>
+				<h2>Magazine Data</h2>
+				<div class="search">
+					<input
+						type="text"
+						id="search-magazine"
+						placeholder="Search magazine by ISBN or Author's email."
+					/>
+				</div>
+				<table id="magazine-data">
+					<thead></thead>
+					<tbody></tbody>
+				</table>
+			</div>
+		</div>
+		<script src="jquery.js"></script>
+		<script src="index.js"></script>
+	</body>
+</html>
